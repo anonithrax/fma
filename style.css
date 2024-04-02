@@ -1,0 +1,89 @@
+.dark {
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-300);
+    --text-tertiary: var(--gray-400);
+    --text-quaternary: var(--gray-500);
+    --border-light: hsla(0, 0%, 100%, .1);
+    --border-medium: hsla(0, 0%, 100%, .15);
+    --border-heavy: hsla(0, 0%, 100%, .2);
+    --border-xheavy: hsla(0, 0%, 100%, .25);
+    --main-surface-primary: var(--gray-800);
+    --main-surface-secondary: var(--gray-700);
+    --main-surface-tertiary: var(--gray-600);
+    --sidebar-surface-primary: var(--gray-900);
+    --sidebar-surface-secondary: var(--gray-800);
+    --sidebar-surface-tertiary: var(--gray-700);
+    --link: #7ab7ff;
+    --link-hover: #5e83b3;
+}
+
+
+body {
+    background-color: var(--main-surface-primary);
+    color: var(--text-primary);
+}
+
+/* Example usage of custom properties */
+.container {
+    border: 1px solid var(--border-light);
+    background-color: var(--main-surface-secondary);
+}
+
+/* You can continue styling your elements using these custom properties */
+
+
+.container {
+    text-align: center;
+    border: 1px solid var(--border-light);
+    background-color: var(--main-surface-secondary);
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+#settings {
+    margin-bottom: 20px;
+}
+
+#game {
+    display: none;
+}
+
+#number {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px; /* Adjust width as needed */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+label {
+    margin-right: 10px;
+}
