@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+    color: #333; /* Default text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
 }
 
 .container {
@@ -58,4 +60,21 @@ button:hover {
 
 #number {
     font-size: 2em;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text color */
+}
+
+.dark-mode button,
+.dark-mode select,
+.dark-mode input[type="number"] {
+    background-color: #555; /* Darker background for inputs and buttons */
+    color: #fff; /* Light text color for inputs and buttons */
+}
+
+.dark-mode button:hover {
+    background-color: #777; /* Darker background on hover for buttons */
 }
