@@ -7,11 +7,6 @@ var startTime;
 var endTime;
 var score = 0;
 
-function toggleDarkMode() {
-    var body = document.body;
-    body.classList.toggle("dark-mode");
-}
-
 function startGame() {
     document.getElementById("settings").style.display = "none";
     document.getElementById("game").style.display = "block";
