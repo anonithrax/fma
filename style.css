@@ -1,89 +1,57 @@
-.dark {
-    --text-primary: var(--gray-100);
-    --text-secondary: var(--gray-300);
-    --text-tertiary: var(--gray-400);
-    --text-quaternary: var(--gray-500);
-    --border-light: hsla(0, 0%, 100%, .1);
-    --border-medium: hsla(0, 0%, 100%, .15);
-    --border-heavy: hsla(0, 0%, 100%, .2);
-    --border-xheavy: hsla(0, 0%, 100%, .25);
-    --main-surface-primary: var(--gray-800);
-    --main-surface-secondary: var(--gray-700);
-    --main-surface-tertiary: var(--gray-600);
-    --sidebar-surface-primary: var(--gray-900);
-    --sidebar-surface-secondary: var(--gray-800);
-    --sidebar-surface-tertiary: var(--gray-700);
-    --link: #7ab7ff;
-    --link-hover: #5e83b3;
-}
-
-
 body {
-    background-color: var(--main-surface-primary);
-    color: var(--text-primary);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
 }
 
-/* Example usage of custom properties */
 .container {
-    border: 1px solid var(--border-light);
-    background-color: var(--main-surface-secondary);
-}
-
-/* You can continue styling your elements using these custom properties */
-
-
-.container {
-    text-align: center;
-    border: 1px solid var(--border-light);
-    background-color: var(--main-surface-secondary);
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    margin-bottom: 30px;
+    text-align: center;
 }
 
-#settings {
-    margin-bottom: 20px;
-}
-
-#game {
-    display: none;
-}
-
-#number {
-    font-size: 48px;
-    font-weight: bold;
+#settings, #game {
     margin-top: 20px;
 }
 
-input[type="number"] {
-    padding: 10px;
-    margin: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100px; /* Adjust width as needed */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input[type="number"], button {
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
 
-button:active {
-    background-color: #3e8e41;
+#game {
+    text-align: center;
 }
 
-label {
-    margin-right: 10px;
+#game h2 {
+    margin-bottom: 10px;
+}
+
+#number {
+    font-size: 2em;
 }
