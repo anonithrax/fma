@@ -48,7 +48,6 @@ function promptUser() {
         return acc + curr;
     }, 0);
 
-   
     if (userSum === actualSum) {
         score += 10; // Increment score for correct answer
     }
@@ -57,5 +56,26 @@ function promptUser() {
 }
 
 function endGame() {
-    document.getElementById("game").innerHTML = "<h2>Game Over!</h2><p>Your final score is: " + score + "</p>";
+    document.getElementById("settings").style.display = "none";
+    document.getElementById("game").style.display = "block";
+
+    document.getElementById("show-score").innerHTML = score;
+
+    // Add a "Play Again" button only if it's not already added
+    if (!document.getElementById("play-again-button")) {
+        var playAgainButton = document.createElement("button");
+        playAgainButton.textContent = "Play Again";
+        playAgainButton.id = "play-again-button"; // Set an ID for easy identification
+        playAgainButton.addEventListener("click", startNewGame); // Call startNewGame function when the button is clicked
+        document.getElementById("game").appendChild(playAgainButton);
+    }
+}
+
+function startNewGame() {
+    // Reset game variables except the score
+    currentQuestionIndex = 0;
+    
+    // Call generateNumbers and displayNumbers to start a new game with prior settings ((or)) call startGame() to make the settings again...!
+    generateNumbers();
+    displayNumbers();
 }
