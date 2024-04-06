@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Flash Mental Arithmetic</h1>
+        <p>Flash mental arithmetic is a memory game which displays digit numbers for some time and user have to add the numbers and provide the answer.</p>
         <div id="settings">
             <label for="digit">Select Digit Count:</label>
             <select id="digit">
@@ -26,9 +27,12 @@
             <input type="number" id="speed" min="0.5" max="3" step="0.1" value="0.5">
             <button onclick="startGame()">Start Game</button>
         </div>
-        <div id="game" style="display: none;">
-            <h2>Answer:</h2>
+        <div id="game">
+            
             <div id="number"></div>
+            <p>Your final score is:
+                <span id="show-score"></span>
+            </p>
         </div>
     </div>
 

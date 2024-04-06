@@ -17,12 +17,15 @@ body {
     text-align: center;
 }
 
+.container p{
+    padding: 10px;
+}
+
 h1 {
     margin-top: 0;
 }
 
-#settings,
-#game {
+#settings{
     margin-top: 20px;
 }
 
