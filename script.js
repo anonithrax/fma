@@ -10,10 +10,8 @@ var score = 0;
 function startGame() {
     document.getElementById("settings").style.display = "none";
     document.getElementById("game").style.display = "block";
-
    
     generateNumbers();
-
     displayNumbers();
 }
 
@@ -69,6 +67,15 @@ function endGame() {
         playAgainButton.addEventListener("click", startNewGame); // Call startNewGame function when the button is clicked
         document.getElementById("game").appendChild(playAgainButton);
     }
+
+    // Add a "Menu" button
+    if (!document.getElementById("menu-button")) {
+        var menuButton = document.createElement("button");
+        menuButton.textContent = "Menu";
+        menuButton.id = "menu-button";
+        menuButton.addEventListener("click", showMenu);
+        document.getElementById("game").appendChild(menuButton);
+    }
 }
 
 function startNewGame() {
@@ -78,4 +85,25 @@ function startNewGame() {
     // Call generateNumbers and displayNumbers to start a new game with prior settings ((or)) call startGame() to make the settings again...!
     generateNumbers();
     displayNumbers();
+}
+
+function showMenu() {
+    // Hide the game interface and display the settings
+    document.getElementById("settings").style.display = "block";
+    document.getElementById("game").style.display = "none";
+
+    // Clear the previous game's content
+    document.getElementById("number").innerText = "";
+    document.getElementById("show-score").innerText = "";
+
+    // Remove the "Play Again" and "Menu" buttons
+    var playAgainButton = document.getElementById("play-again-button");
+    if (playAgainButton) {
+        playAgainButton.parentNode.removeChild(playAgainButton);
+    }
+
+    var menuButton = document.getElementById("menu-button");
+    if (menuButton) {
+        menuButton.parentNode.removeChild(menuButton);
+    }
 }
