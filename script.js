@@ -7,7 +7,14 @@ var startTime;
 var endTime;
 var score = 0;
 
+function updateSettings() {
+    digit = parseInt(document.getElementById("digit").value);
+    question = parseInt(document.getElementById("question").value);
+    speed = parseFloat(document.getElementById("speed").value);
+}
+
 function startGame() {
+    updateSettings();
     document.getElementById("settings").style.display = "none";
     document.getElementById("game").style.display = "block";
    
@@ -20,11 +27,13 @@ function generateNumbers() {
     for (var i = 0; i < question; i++) {
         var num = "";
         for (var j = 0; j < digit; j++) {
-            num += Math.floor(Math.random() * 10); // Generate random digit
+            var digitToAdd = Math.floor(Math.random() * 9) + 1;
+            num += digitToAdd;
         }
-        numbers.push(parseInt(num)); // Convert string to integer for sum calculation
+        numbers.push(parseInt(num));
     }
 }
+
 
 function displayNumbers() {
     var currentIndex = 0;
@@ -47,30 +56,30 @@ function promptUser() {
     }, 0);
 
     if (userSum === actualSum) {
-        score += 10; // Increment score for correct answer
+        score += 10;
+    } else {
+        document.getElementById("number").innerText = "Correct answer: " + actualSum;
     }
 
     endGame();
 }
 
-function endGame() {
-    document.getElementById("settings").style.display = "none";
-    document.getElementById("game").style.display = "block";
 
+function endGame() {
     document.getElementById("show-score").innerHTML = score;
 
-    // Add a "Play Again" button only if it's not already added
-    if (!document.getElementById("play-again-button")) {
-        var playAgainButton = document.createElement("button");
+    var playAgainButton = document.getElementById("play-again-button");
+    if (!playAgainButton) {
+        playAgainButton = document.createElement("button");
         playAgainButton.textContent = "Play Again";
-        playAgainButton.id = "play-again-button"; // Set an ID for easy identification
-        playAgainButton.addEventListener("click", startNewGame); // Call startNewGame function when the button is clicked
+        playAgainButton.id = "play-again-button";
+        playAgainButton.addEventListener("click", startNewGame);
         document.getElementById("game").appendChild(playAgainButton);
     }
 
-    // Add a "Menu" button
-    if (!document.getElementById("menu-button")) {
-        var menuButton = document.createElement("button");
+    var menuButton = document.getElementById("menu-button");
+    if (!menuButton) {
+        menuButton = document.createElement("button");
         menuButton.textContent = "Menu";
         menuButton.id = "menu-button";
         menuButton.addEventListener("click", showMenu);
@@ -79,24 +88,17 @@ function endGame() {
 }
 
 function startNewGame() {
-    // Reset game variables except the score
     currentQuestionIndex = 0;
-    
-    // Call generateNumbers and displayNumbers to start a new game with prior settings ((or)) call startGame() to make the settings again...!
     generateNumbers();
     displayNumbers();
 }
 
 function showMenu() {
-    // Hide the game interface and display the settings
     document.getElementById("settings").style.display = "block";
     document.getElementById("game").style.display = "none";
-
-    // Clear the previous game's content
     document.getElementById("number").innerText = "";
     document.getElementById("show-score").innerText = "";
 
-    // Remove the "Play Again" and "Menu" buttons
     var playAgainButton = document.getElementById("play-again-button");
     if (playAgainButton) {
         playAgainButton.parentNode.removeChild(playAgainButton);

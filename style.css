@@ -2,22 +2,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
-    color: #333; /* Default text color */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+    background-color: #1e1e1e;
+    color: #fff;
+    zoom: 140%;
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #333;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.container p{
+.container p {
     padding: 10px;
 }
 
@@ -25,13 +25,14 @@ h1 {
     margin-top: 0;
 }
 
-#settings{
+#settings {
     margin-top: 20px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
+    color: #fff;
 }
 
 select,
@@ -39,18 +40,14 @@ input[type="number"],
 button {
     margin-bottom: 10px;
     padding: 5px;
-}
-
-button {
-    background-color: #007bff;
+    background-color: #444;
     color: #fff;
     border: none;
     border-radius: 3px;
-    cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #555;
 }
 
 #game {
@@ -63,21 +60,39 @@ button:hover {
 
 #number {
     font-size: 2em;
+    color: #fff;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #333; /* Dark background */
-    color: #fff; /* Light text color */
+#show-score {
+    color: #ff0;
 }
 
-.dark-mode button,
-.dark-mode select,
-.dark-mode input[type="number"] {
-    background-color: #555; /* Darker background for inputs and buttons */
-    color: #fff; /* Light text color for inputs and buttons */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.dark-mode button:hover {
-    background-color: #777; /* Darker background on hover for buttons */
+.socials {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #007bff;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
 }
