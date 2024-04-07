@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    zoom: 140%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container p {
+    padding: 10px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#settings {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+select,
+input[type="number"],
+button {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#game {
+    display: none;
+}
+
+#game h2 {
+    margin-bottom: 10px;
+}
+
+#number {
+    font-size: 2em;
+    color: #fff;
+}
+
+#show-score {
+    color: #ff0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.socials {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #007bff;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
