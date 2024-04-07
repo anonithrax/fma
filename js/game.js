@@ -1,6 +1,6 @@
-var digit = 1; 
+var digit = 1;
 var question = 5;
-var speed = 0.5; 
+var speed = 0.5;
 var numbers = [];
 var currentQuestionIndex = 0;
 var startTime;
@@ -17,7 +17,7 @@ function startGame() {
     updateSettings();
     document.getElementById("settings").style.display = "none";
     document.getElementById("game").style.display = "block";
-   
+
     generateNumbers();
     displayNumbers();
 }
@@ -38,20 +38,20 @@ function generateNumbers() {
 function displayNumbers() {
     var currentIndex = 0;
 
-    var intervalId = setInterval(function() {
+    var intervalId = setInterval(function () {
         if (currentIndex < numbers.length) {
             document.getElementById("number").innerText = numbers[currentIndex++];
         } else {
             clearInterval(intervalId);
             promptUser();
         }
-    }, speed * 1000); 
+    }, speed * 1000);
 }
 
 function promptUser() {
     var userSum = parseInt(prompt("Enter the sum of the displayed numbers:"));
 
-    var actualSum = numbers.reduce(function(acc, curr) {
+    var actualSum = numbers.reduce(function (acc, curr) {
         return acc + curr;
     }, 0);
 
